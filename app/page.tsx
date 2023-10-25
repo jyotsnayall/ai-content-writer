@@ -13,12 +13,14 @@ function HomePage() {
           height={200}
           alt="logo"
         />
-        <h1 className="text-5xl font-bold mb-20">AI Content Generator</h1>
-        <p>Made by-</p>
-        <p>Jyotsna Sharma (UE208049)</p>
-        <p>Kriti Paul (UE208052)</p>
-        <p>Manish Kumar Paswan (UE208059)</p>
-        <p>Anshul Tomar (UE208021)</p>
+        <h1 className="text-5xl font-bold mb-20 text-black">AI Content Generator</h1>
+        <div className='text-black'>
+            <p>Made by-</p>
+            <p>Jyotsna Sharma (UE208049)</p>
+            <p>Kriti Paul (UE208052)</p>
+            <p>Manish Kumar Paswan (UE208059)</p>
+            <p>Anshul Tomar (UE208021)</p>
+        </div>
 
         {/* <div className="flex space-x-2 text-center">
             <div>

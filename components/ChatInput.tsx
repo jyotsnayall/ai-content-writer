@@ -1,7 +1,8 @@
 "use client";
 
 import { db } from "@/firebase";
-import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { PaperAirplaneIcon, MicrophoneIcon } from "@heroicons/react/24/solid";
+
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
@@ -74,6 +75,12 @@ function ChatInput({ chatId }: Props) {
     // <div className="bg-gray-700/50 text-gray-400 text-sm rounded-3xl	w-4/5 m-auto mb-6 ">
     <div className="bg-[#FFDFDF] text-black-400 text-sm rounded-3xl	w-4/5 m-auto mb-6 ">
         <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
+            <button
+                className="bg-[#11A37F] hover:opacity-50 text-white font-bold px-4 py-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed"
+            >
+                <MicrophoneIcon className="h-5 w-4" />
+            </button>
+            
             <input 
                 className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
                 disabled={!session}
