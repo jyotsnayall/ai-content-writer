@@ -1,11 +1,26 @@
 import { BoltIcon, ExclamationTriangleIcon, SunIcon } from '@heroicons/react/24/outline'
+import logo from '../public/images/logo.png'
+import Image from "next/image";
+
 
 function HomePage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen px-2 text-white">
-        <h1 className="text-5xl font-bold mb-20">Content Generator</h1>
+        <Image 
+          // src="https://evolveyoursuccess.com/wp-content/uploads/2019/12/lightbulb-icon-png-icon-transparent-light-bulb-png.png"
+          src = {logo}
+          width={200}
+          height={200}
+          alt="logo"
+        />
+        <h1 className="text-5xl font-bold mb-20">AI Content Generator</h1>
+        <p>Made by-</p>
+        <p>Jyotsna Sharma (UE208049)</p>
+        <p>Kriti Paul (UE208052)</p>
+        <p>Manish Kumar Paswan (UE208059)</p>
+        <p>Anshul Tomar (UE208021)</p>
 
-        <div className="flex space-x-2 text-center">
+        {/* <div className="flex space-x-2 text-center">
             <div>
                 <div className="flex flex-col items-center justify-center mb-5">
                     <SunIcon className="h-8 w-8" />
@@ -48,7 +63,7 @@ function HomePage() {
             
 
 
-        </div>
+        </div> */}
 
 
 

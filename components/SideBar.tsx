@@ -6,6 +6,7 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import NewChat from "./NewChat"
 import { db } from "@/firebase";
 import ChatRow from "./ChatRow";
+import {FaSignOutAlt} from 'react-icons/fa';
 import ModelSelection from "./ModelSelection";
 
 function SideBar() {
@@ -25,34 +26,39 @@ function SideBar() {
         <div>
           <NewChat />
 
-          <div className="hidden sm:inline">
+          {/* <div className="hidden sm:inline">
             <ModelSelection />
-          </div>
+          </div> */}
 
-          {/* <div className="flex flex-col space-y-2 my-2">
+          <div className="flex flex-col space-y-2 my-2 ">
 
                 {loading && (
-                  <div className="animate-pulse text-center text-white">
+                  <div className="animate-pulse text-center text-black">
                     <p>Loading Chats...</p>
                   </div>
-                )}  */}
+                )} 
 
           {/* Map through the Chat Rows */}
           {chats?.docs.map(chat => (
             <ChatRow key={chat.id} id={chat.id} />
           ))}
-          {/* </div> */}
+          </div>
         </div>
       </div>
 
       {session && (
-        <img
+        // <img
+        //   onClick={() => signOut()}
+        //   // src={session.user?.image!}
+        //   alt="Profile pic"
+        //   className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
+        // />
+        <FaSignOutAlt 
           onClick={() => signOut()}
-          src={session.user?.image!}
-          alt="Profile pic"
-          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
+          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50 text-white"
         />
       )}
+
     </div>
   )
 }

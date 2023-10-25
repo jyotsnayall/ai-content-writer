@@ -25,7 +25,7 @@ function Chat({ chatId }: Props) {
           chatId, 
           "messages"
         ),
-        orderBy("createdAt", "asc")
+        orderBy("createdAt", "desc")
       )
   );
 
