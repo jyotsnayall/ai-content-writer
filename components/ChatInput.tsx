@@ -73,7 +73,7 @@ function ChatInput({ chatId }: Props) {
 
   return (
     // <div className="bg-gray-700/50 text-gray-400 text-sm rounded-3xl	w-4/5 m-auto mb-6 ">
-    <div className="bg-[#FFDFDF] text-black-400 text-sm rounded-3xl	w-4/5 m-auto mb-6 ">
+    <div className="bg-[#e4dbf7] text-black-400 text-sm rounded-3xl	w-4/5 m-auto mb-6 ">
         <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
             <button
                 className="bg-[#11A37F] hover:opacity-50 text-white font-bold px-4 py-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed"
